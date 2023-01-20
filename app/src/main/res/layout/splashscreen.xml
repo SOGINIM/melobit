@@ -8,13 +8,14 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="231dp"
+        android:layout_height="280dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/logo_melobit"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447"
+        app:srcCompat="@drawable/logo_melobit" />
 
     <TextView
         android:id="@+id/welcometxt"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
 
-        android:layout_marginBottom="620dp"
+        android:layout_marginBottom="596dp"
         android:gravity="center"
         android:text="By Sogand Sadeghi"
         android:textColor="#FFFCFC"

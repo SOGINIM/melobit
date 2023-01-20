@@ -1,183 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1F3E"
-    android:visibility="visible"
-    tools:context=".MainActivity"
-    tools:visibility="visible">
+    android:background="#1D1F3E">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="283dp"
-        android:layout_height="173dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="59dp"
-        app:srcCompat="@drawable/searchbar" />
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Hello User"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="76dp"
-        android:fontFamily="sans-serif-light"
-        android:text="What Do You Want To Hear?"
-        android:textColor="#FFF2F2"
-        android:textSize="24sp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="168dp"
-        android:layout_height="123dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="203dp"
-        android:layout_marginBottom="430dp"
-        app:srcCompat="@drawable/new_song" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="166dp"
-        android:layout_height="114dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="320dp"
-        app:srcCompat="@drawable/top_singers" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="180dp"
-        android:layout_height="122dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="204dp"
-        app:srcCompat="@drawable/top_song_day" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="219dp"
-        android:layout_height="143dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="53dp"
-        app:srcCompat="@drawable/top_song_week" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="131dp"
-        app:srcCompat="@android:drawable/ic_menu_search" />
-
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="-8dp"
-        android:hint=" search for music"
-        app:hintAnimationEnabled="true"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:hintTextColor="#FBFBFB">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="159dp"
-            android:layout_height="21dp"
-            android:background="#344F8A"
-            android:hint="hint"
-            android:textColor="#0B0808"
-            android:textColorHint="#FFFFFF"
-            tools:ignore="TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="#1D1F3E"
+       />
 
-    <TextView
-        android:id="@+id/daystop"
-        android:layout_width="132dp"
-        android:layout_height="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="454dp"
-        android:layout_marginEnd="61dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="days top 10"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/topartists"
-        android:layout_width="132dp"
-        android:layout_height="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="351dp"
-        android:layout_marginEnd="210dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="top artists"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/weekstop2"
-        android:layout_width="132dp"
-        android:layout_height="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="222dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="weeks top 10"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/newhits2"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="93dp"
-        android:contextClickable="true"
-        android:fontFamily="sans-serif-condensed"
-        android:minHeight="48dp"
-        android:text="New Hits"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

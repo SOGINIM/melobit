@@ -14,23 +14,21 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.melobit.R;
-import com.example.melobit.artistinfo;
-import com.example.melobit.searchm;
+import com.example.melobit.ArtistInfo_M;
+import com.example.melobit.Search_M;
 
 import java.util.List;
 
 public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHolder> {
 
-    private List<artistinfo.Result> myList;
+    private List<ArtistInfo_M.Result> myList;
 
-
-    private List<searchm.Artist> list_search_artist;
+    private List<Search_M.Artist> list_search_artist;
     Activity activity;
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_name, tv_download_count;
-
         public AppCompatImageView iv_avatar;
 
 
@@ -42,7 +40,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHold
         }
     }
 
-    public ArtistAdapter(List<artistinfo.Result> myList, List<searchm.Artist> list_search_artist, Activity activity) {
+    public ArtistAdapter(List<ArtistInfo_M.Result> myList, List<Search_M.Artist> list_search_artist, Activity activity) {
         this.myList = myList;
         this.list_search_artist = list_search_artist;
         this.activity = activity;
@@ -61,7 +59,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHold
     @NonNull
     @Override
     public ArtistAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemartist, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_artist, parent, false);
 
 
         return new ArtistAdapter.MyViewHolder(itemView);
@@ -69,17 +67,13 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(final ArtistAdapter.MyViewHolder holder, final int position) {
-        if (myList != null) {
-
-
-            artistinfo.Result model = myList.get(position);
+        if (myList != null) { // Return Artist for CategoriesInfo
+            ArtistInfo_M.Result model = myList.get(position);
             holder.tv_name.setText(model.getFullName());
             holder.tv_download_count.setText(model.getSumSongsDownloadsCount());
             setImageToView(holder.iv_avatar, model.getImage().getCover().getUrl());
-        }else {
-
-
-            searchm.Artist model = list_search_artist.get(position);
+        }else { // Return Artist for Search
+            Search_M.Artist model = list_search_artist.get(position);
             holder.tv_name.setText(model.getFullName());
             holder.tv_download_count.setText(model.getSumSongsDownloadsCount());
             setImageToView(holder.iv_avatar, model.getImage().getCover().getUrl());
