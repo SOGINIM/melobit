@@ -32,27 +32,21 @@ public class MainActivity extends AppCompatActivity {
 
     public static ExoPlayer exoPlayerAudio;
 
-    TextView newhits2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
 
-        exoPlayerAudio = new ExoPlayer.Builder(this).setMediaSourceFactory(new DefaultMediaSourceFactory(this).setLiveTargetOffsetMs(5000))
-                .build(); // init AudioPlayer for all Screen
-        newhits2=(TextView) findViewById(R.id.newhits2);
-
-        newhits2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent activitylistintent = new Intent(getApplicationContext(), activitylist.class);
-                startActivity(activitylistintent);
-
-            }
+        exoPlayerAudio = new ExoPlayer.Builder(this).setMediaSourceFactory(new DefaultMediaSourceFactory(this)
+                        .setLiveTargetOffsetMs(3000)).build();
 
 
-        });
+
 
     }
 
