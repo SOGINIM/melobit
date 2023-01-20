@@ -172,11 +172,12 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="230dp"
         android:layout_marginEnd="93dp"
-        android:contextClickable="false"
+        android:contextClickable="true"
         android:fontFamily="sans-serif-condensed"
-        android:onClick="true"
+        android:minHeight="48dp"
         android:text="New Hits"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
+
 
 </RelativeLayout>
