@@ -20,7 +20,7 @@
         app:layout_constraintStart_toEndOf="@+id/FL_button"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_fast_forward"
-        app:tint="@color/purple" />
+        app:tint="#4A9DC0" />
 
     <FrameLayout
         android:id="@+id/FL_button"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            app:tint="@color/purple" />
+            app:tint="#4A9DC0" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@id/exo_pause"
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            app:tint="@color/purple" />
+            app:tint="#4A9DC0" />
 
     </FrameLayout>
 
@@ -62,20 +62,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_replay_10"
-        app:tint="@color/purple" />
+        app:tint="#4A9DC0" />
 
     <com.google.android.exoplayer2.ui.DefaultTimeBar
         android:id="@id/exo_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
-        app:ad_marker_color="@color/purple"
-        app:buffered_color="@color/purple"
+        app:ad_marker_color="#4A9DC0"
+        app:buffered_color="#4A9DC0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FL_button"
-        app:played_color="@color/purple"
-        app:scrubber_color="@color/purple"
+        app:played_color="#4A9DC0"
+        app:scrubber_color="#4A9DC0"
         app:unplayed_color="@color/mainColor3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
